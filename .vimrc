@@ -36,6 +36,11 @@ set smartindent autoindent " makes indenting easier
 " turn on higlighting
 highlight Visual cterm=reverse ctermbg=NONE
 
+" - - - - - - - - CUSTOM COMMANDS - - - - - - - - 
+command Rswdg %s/\'/\"/g
+command Rswdl s/\'/\"/g
+
+
 " - - - - - - - - VIM BAD - - - - - - - - 
 " CVE-2019-12735
 set nomodeline
