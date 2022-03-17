@@ -20,16 +20,18 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" - - - - - - - - INSERT MODE - - - - - - - - 
-set smartindent autoindent " makes indenting easier
-" tab behavior
+" - - - - - - - - SPACING - - - - - - - - 
+" default tab behavior
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 " Governs PL-specific tab behvaior
+autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+" shifting behavior
+set smartindent autoindent " makes indenting easier
 
 " turn on higlighting
 highlight Visual cterm=reverse ctermbg=NONE
