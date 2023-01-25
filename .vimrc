@@ -30,6 +30,7 @@ set expandtab
 autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType make setlocal noexpandtab softtabstop=0
 " shifting behavior
 set smartindent autoindent " makes indenting easier
 
@@ -39,7 +40,6 @@ highlight Visual cterm=reverse ctermbg=NONE
 " - - - - CUSTOM COMMANDS
 command Rswdg %s/\'/\"/g
 command Rswdl s/\'/\"/g
-
 
 " - - - - VIM BAD
 " CVE-2019-12735
