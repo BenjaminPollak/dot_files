@@ -31,6 +31,7 @@ autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType make setlocal noexpandtab softtabstop=0
+autocmd FileType go setlocal noexpandtab softtabstop=0
 " shifting behavior
 set smartindent autoindent " makes indenting easier
 
