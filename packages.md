@@ -1,6 +1,7 @@
 # Pacakges Installed from APT
 * git
 * golang-go
+* jq
 * postgresql
 * python3-pip
 * ranger
