@@ -2,6 +2,8 @@
 * git
 * golang-go
 * jq
+* nodejs
+* npm
 * postgresql
 * python3-pip
 * ranger
