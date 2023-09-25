@@ -1,4 +1,5 @@
 # Pacakges Installed from APT
+* curl
 * git
 * golang-go
 * jq
