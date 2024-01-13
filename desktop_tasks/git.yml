@@ -1,0 +1,8 @@
+- name: Install Git
+  apt: name=git
+  tags:
+  - git
+- name: Install Stow
+  apt: name=stow
+  tags:
+  - git
