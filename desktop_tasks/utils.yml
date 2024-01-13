@@ -1,7 +1,8 @@
 - name: Install utils
   apt:
-    name: [
-      'curl',
-      'jq',
-      'ranger'
-    ]
+    name: 
+      - 'curl'
+      - 'jq'
+      - 'ranger'
+  tags:
+    - utils
