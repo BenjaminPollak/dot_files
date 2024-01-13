@@ -1,0 +1,6 @@
+- name: Install dev tools
+  apt:
+    name: [
+      "postgresql", # TODO: Does this work?
+      "sqlite3"
+    ]

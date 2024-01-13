@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+      - utils
+      - dev_tools
+  tasks:
+    - include: desktop_tasks/utils.yml
+    - include: desktop_tasks/dev_tools.yml

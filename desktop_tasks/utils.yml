@@ -1,0 +1,7 @@
+- name: Install utils
+  apt:
+    name: [
+      'curl',
+      'jq',
+      'ranger'
+    ]

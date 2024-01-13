@@ -1,13 +1,13 @@
 # My Dotfiles
 
-This repo is for tracking my dotfiles. It currently contains:
+This repo is for tracking my dotfiles. It currently contains the following:
 
-* .vimrc
-* .bashrc
-* .bash\_profile
-* .gitconfig
-* global .gitignore
+* Ansible Scripts (for quickly installing and configuring software on a new computer)
+* Bash Config Scripts
+* Git Configs
+* Vim Config
 
 These are the files that need to be added:
 * ~/.config/i3/config
 * ~/.config/i3blocks/
+* ~/.config/nvim/
