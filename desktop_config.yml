@@ -7,6 +7,11 @@
       tags:
       - utils
       - dev_tools
+      - golang
+      - python
   tasks:
-    - include: desktop_tasks/utils.yml
+    # Ordering is intentional, DO NOT ALPHABETIZE!
     - include: desktop_tasks/dev_tools.yml
+    - include: desktop_tasks/utils.yml
+    - include: desktop_tasks/golang.yml
+    - include: desktop_tasks/python.yml

@@ -1,0 +1,13 @@
+- name: Install Python 3
+  apt: name=python3
+  tags:
+  - python
+- name: Install Pip
+  apt: name=python3-pip
+  tags:
+  - python
+- name: Install virtualenv python package
+  ansible.builtin.pip:
+    name: virtualenv
+  tags:
+  - python

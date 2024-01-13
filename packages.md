@@ -10,25 +10,27 @@
 * sqlite3 [X]
 
 ## Languages, Environment Tools and Package Managers
-* golang-go []
+
+### GoLang
+* golang-go [X]
 
 ### Python
-* python3 []
-* python3-pip []
-* virtualenv []
+* python3 [X]
+* python3-pip [X]
+* virtualenv [X]
 
 ### JS/TS/Node
 * nodejs []
 * npm []
 
-### git
+## git
 * git []
 * config []
 
-### Vim/Nvim
+## Vim/Nvim
 * vim []
 * nvim []
 * nvim config
 
-### Tmux
+## Tmux
 * tmux []
