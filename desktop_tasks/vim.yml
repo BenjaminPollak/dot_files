@@ -2,3 +2,7 @@
   apt: name=vim
   tags:
   - vim
+- name: Install neovim
+  apt: name=neovim
+  tags:
+  - vim
