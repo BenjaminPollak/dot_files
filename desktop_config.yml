@@ -9,9 +9,14 @@
       - dev_tools
       - golang
       - python
+      - git
+      - vim
   tasks:
     # Ordering is intentional, DO NOT ALPHABETIZE!
     - include: desktop_tasks/dev_tools.yml
     - include: desktop_tasks/utils.yml
     - include: desktop_tasks/golang.yml
     - include: desktop_tasks/python.yml
+    - include: desktop_tasks/git.yml # TODO: add config
+    - include: desktop_tasks/stow.yml # TODO: add `stow`ing logic
+    - include: desktop_tasks/vim.yml # TODO: add config

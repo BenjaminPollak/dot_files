@@ -1,0 +1,12 @@
+- name: Install Stow
+  apt: name=stow
+  tags:
+  - stow
+- name: Clone dotfiles
+  git:
+    repo: https://github.com/BenjaminPollak/dot_files
+    dest: $HOME/dot_files
+    clone: yes
+    update: yes
+  tags:
+  - stow
