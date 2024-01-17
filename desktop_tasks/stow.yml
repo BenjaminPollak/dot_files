@@ -2,3 +2,5 @@
   apt: name=stow
   tags:
   - stow
+- name: Stow necessary files
+  script: ./ubuntu.sh
