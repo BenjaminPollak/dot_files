@@ -18,5 +18,5 @@
     - include: desktop_tasks/golang.yml
     - include: desktop_tasks/python.yml
     - include: desktop_tasks/git.yml # TODO: add config
-    - include: desktop_tasks/stow.yml # TODO: add `stow`ing logic
-    - include: desktop_tasks/vim.yml # TODO: add config
+    - include: desktop_tasks/stow.yml
+    - include: desktop_tasks/vim.yml
