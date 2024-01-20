@@ -7,11 +7,11 @@ This repo is for tracking my dotfiles. It currently contains the following:
 * Git Configs
 * Vim/Nvim Config
 
-These are the files that need to be added:
-* ~/.config/i3/config
-* ~/.config/i3blocks/
-* ~/.config/nvim/
-
 Config files are managed through GNU Stow.
 
-Dockerfile and Makefile are included so I can test this setup easy.
+Dockerfile and Makefile are included so I can test this setup easily.
+
+# TODOs
+* Add ~/.config/i3/config
+* Add ~/.config/i3blocks/
+* Refactor custom nvim commands to use Lua instead of Vimscript
