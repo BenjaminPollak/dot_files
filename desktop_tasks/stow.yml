@@ -4,3 +4,5 @@
   - stow
 - name: Stow necessary files
   script: ./ubuntu.sh
+  tags:
+  - stow

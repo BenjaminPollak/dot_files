@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	excludesfile = ~/code/dot_files/global_gitignore
+	excludesfile = ~/.gitignore_global
 [init]
         defaultBranch = main
 [user]
