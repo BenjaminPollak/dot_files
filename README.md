@@ -22,6 +22,7 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 
 # TODOs
 
+- Add make automation
 - Switch from bash to zsh
 - Add tmux config
 - Add ~/.config/i3/config
