@@ -23,6 +23,9 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 # TODOs
 
 - Add make automation
+  - build/run docker image
+  - run ansible
+  - stow/unstow
 - Update git config
 - Switch from bash to zsh
 - Add tmux config
