@@ -1,4 +1,4 @@
 - name: Install GoLang
   apt: name=golang-go
   tags:
-  - golang
+    - golang
