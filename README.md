@@ -11,6 +11,12 @@ Config files are managed through GNU Stow.
 
 Dockerfile and Makefile are included so I can test this setup easily.
 
+# Prerequisites
+
+- Machine has `docker` installed
+- Machine has `make` installed
+- Primary user account is named `benjamin`
+
 # Testing with Docker
 
 Obviously you'll need docker installed. Then, follow the below instructions:
@@ -25,7 +31,6 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 - Add make automation
   - stow/unstow
 - Update git config
-- Switch from bash to zsh
 - Add tmux config
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/

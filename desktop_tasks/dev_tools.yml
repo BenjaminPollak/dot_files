@@ -1,8 +1,14 @@
 - name: Install dev tools
   apt:
     name:
-      - "postgresql" # TODO: Does this work?
+      - "postgresql"
       - "sqlite3"
       - "make"
+      - "zsh"
   tags:
     - dev_tools
+- name: change user shell to zsh
+  become: yes
+  user:
+    name: "{{ the_user }}"
+    shell: /usr/bin/zsh
