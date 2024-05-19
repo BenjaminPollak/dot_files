@@ -1,8 +1,8 @@
 - name: Install Vim
   apt: name=vim
   tags:
-  - vim
+    - vim
 - name: Install neovim
   apt: name=neovim
   tags:
-  - vim
+    - vim

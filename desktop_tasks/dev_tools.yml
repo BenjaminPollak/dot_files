@@ -1,7 +1,8 @@
 - name: Install dev tools
   apt:
-    name: 
-      - 'postgresql' # TODO: Does this work?
-      - 'sqlite3'
+    name:
+      - "postgresql" # TODO: Does this work?
+      - "sqlite3"
+      - "make"
   tags:
-  - dev_tools
+    - dev_tools

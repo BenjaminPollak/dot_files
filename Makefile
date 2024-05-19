@@ -1,4 +1,6 @@
 build:
 	sudo docker build -t hello .
-run: build
-	sudo docker run -v /home/benjamin/dot_files:/mnt/cur --rm -it hello bash
+docker: build
+	sudo docker run -v /home/benjamin/dot_files:/root/dot_files --rm -it hello bash
+run:
+	ansible-playbook desktop_config.yml

@@ -1,8 +1,8 @@
 - name: Install Stow
   apt: name=stow
   tags:
-  - stow
+    - stow
 - name: Stow necessary files
   script: ./ubuntu.sh
   tags:
-  - stow
+    - stow
