@@ -4,5 +4,6 @@
       - "curl"
       - "jq"
       - "ranger"
+      - "fzf"
   tags:
     - utils
