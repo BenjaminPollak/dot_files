@@ -38,3 +38,15 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 set -o vi
 export EDITOR="nvim"
+export VISUAL="nvim"
+
+bindkey "^R" history-incremental-search-backward
+
+# open command in buffer
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# TODO: prompt
+PROMPT='%B%F{003} U %B%F{015}%~%B%F{006} >>%b%F{015} '
+# TODO: syntax highlighting?
