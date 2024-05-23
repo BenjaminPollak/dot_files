@@ -50,3 +50,6 @@ bindkey -M vicmd v edit-command-line
 # TODO: prompt
 PROMPT='%B%F{003} U %B%F{015}%~%B%F{006} >>%b%F{015} '
 # TODO: syntax highlighting?
+
+# Golang relatted
+export PATH=$PATH:~/go/bin
