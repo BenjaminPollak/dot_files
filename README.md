@@ -28,8 +28,6 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 
 # TODOs
 
-- Add make automation
-  - stow/unstow
 - Update git config
 - Add tmux config
 - Add ~/.config/i3/config
