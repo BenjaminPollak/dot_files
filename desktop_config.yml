@@ -7,6 +7,7 @@
       apt:
         update_cache: true
       tags:
+        - ubuntu
         - utils
         - dev_tools
         - golang

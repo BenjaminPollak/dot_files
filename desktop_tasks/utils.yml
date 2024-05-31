@@ -6,4 +6,5 @@
       - "ranger"
       - "fzf"
   tags:
+    - ubuntu
     - utils

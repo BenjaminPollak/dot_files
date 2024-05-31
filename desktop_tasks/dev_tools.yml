@@ -6,6 +6,7 @@
       - "make"
       - "zsh"
   tags:
+    - ubuntu
     - dev_tools
 - name: change user shell to zsh
   become: yes
