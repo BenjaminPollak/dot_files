@@ -5,6 +5,7 @@
       - "jq"
       - "ranger"
       - "fzf"
+      - "xclip"
   tags:
     - ubuntu
     - utils
