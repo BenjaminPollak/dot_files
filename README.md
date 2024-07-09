@@ -26,8 +26,15 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 3. run the container using `docker run -i -v ${PWD}:/home/ubuntu/dot_files -t <CONTAINER_ID> /bin/bash`
 4. navigate to /home/ubuntu/dot_files in the container and execute `ansible-playbook desktop_config.yml`
 
+# Per-Machine Configuration
+
+I have made this possible in the following ways:
+
+- for Z-Shell: put confi in `~/local.zsh`
+
 # TODOs
 
+- automate install of docker-compose
 - Update git config
 - Add tmux config
 - Add ~/.config/i3/config
