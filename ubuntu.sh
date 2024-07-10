@@ -2,7 +2,7 @@
 mkdir -p ../.config
 
 if [[ -z $STOW_FOLDERS ]]; then
-  STOW_FOLDERS="nvim,git,zsh" # To add more, simply insert a comma and then a program name (no whitespace)
+  STOW_FOLDERS="nvim,zsh,git" # To add more, simply insert a comma and then a program name (no whitespace)
 fi
 
 if [[ -z $DOT_FILES ]]; then
