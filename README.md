@@ -30,13 +30,13 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 
 I have made this possible in the following ways:
 
-- for Z-Shell: put confi in `~/local.zsh`
+- for Z-Shell: put config in `~/local.zsh`
 
 # TODOs
 
-- automate install of docker-compose
 - Update git config
 - Add tmux config
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
 - Refactor custom nvim commands to use Lua instead of Vimscript
+- automate install of docker-compose
