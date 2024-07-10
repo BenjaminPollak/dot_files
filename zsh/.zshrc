@@ -55,4 +55,4 @@ PROMPT='%B%F{003} U %B%F{015}%~%B%F{006} >>%b%F{015} '
 export PATH=$PATH:~/go/bin
 export GOPATH=$HOME/code
 
-source ~/local.zsh
+source ~/.local.zsh
