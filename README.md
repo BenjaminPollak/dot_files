@@ -34,7 +34,6 @@ I have made this possible in the following ways:
 
 # TODOs
 
-- Update git config
 - Add tmux config
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/

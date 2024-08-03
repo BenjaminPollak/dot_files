@@ -5,3 +5,21 @@
         defaultBranch = main
 [user]
 	name = Benjamin Pollak
+	email = benjaminwpollak@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+	insteadOf = https://github.com/
+[includeIf "gitDir:~/work"]
+  path = ~/work/.gitconfig
+[alias]
+	blame = blame -w
+	blaame = blame -w -C
+	blaaame = blame -w -C -C
+	blaaaame = blame -w -C -C -C
+	wdiff = diff --word-diff
+	cbranch = branch --column # TODO: test
+	fpush = push --force-with-lease # TODO: test
+[branch]
+	sort = -committerdate
+[rebase]
+	updateRefs = true
