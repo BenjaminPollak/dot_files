@@ -6,7 +6,7 @@
 [user]
 	name = Benjamin Pollak
 	email = benjaminwpollak@gmail.com
-[includeIf "gitDir:/Users/benjaminpollak/work/"]
+[includeIf "gitdir:/Users/benjaminpollak/work/"]
   path = /Users/benjaminpollak/work/.gitconfig
 [url "git@github.com:"]
 	insteadOf = https://github.com/
