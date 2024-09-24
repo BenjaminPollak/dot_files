@@ -5,8 +5,8 @@
         defaultBranch = main
 [includeIf "gitdir:~/"]
   path = ~/.identityconfig
-[includeIf "gitdir:/Users/benjaminpollak/work/"]
-  path = /Users/benjaminpollak/work/.gitconfig
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 	insteadOf = https://github.com/
