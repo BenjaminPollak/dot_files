@@ -17,7 +17,7 @@
 	blaaaame = blame -w -C -C -C
 	wdiff = diff --word-diff
 	cbranch = branch --column # TODO: test
-	fpush = push --force-with-lease # TODO: test
+	fpush = push --force-with-lease
 [branch]
 	sort = -committerdate
 [rebase]
