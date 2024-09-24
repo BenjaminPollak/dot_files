@@ -6,7 +6,7 @@
 [includeIf "gitdir:~/"]
   path = ~/.identityconfig
 [includeIf "gitdir:~/work/"]
-  path = ~/.gitconfig
+  path = ~/work/.gitconfig
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 	insteadOf = https://github.com/
