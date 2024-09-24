@@ -37,6 +37,7 @@ I have made this possible in the following ways:
 - Add tmux config
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
+- Automate creation of `~/.identityconfig` with git name + email
 - Pull dependencies from Snap instead of APT
 - Refactor custom nvim commands to use Lua instead of Vimscript
 - automate install of docker-compose
