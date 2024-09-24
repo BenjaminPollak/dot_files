@@ -3,9 +3,8 @@
 	excludesfile = ~/.gitignore_global
 [init]
         defaultBranch = main
-[user]
-	name = Benjamin Pollak
-	email = benjaminwpollak@gmail.com
+[includeIf "gitdir:~/"]
+  path = ~/.identityconfig
 [includeIf "gitdir:/Users/benjaminpollak/work/"]
   path = /Users/benjaminpollak/work/.gitconfig
 [url "git@github.com:"]
