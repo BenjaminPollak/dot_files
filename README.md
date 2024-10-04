@@ -34,6 +34,7 @@ I have made this possible in the following ways:
 
 # TODOs
 
+- Get none-ls to play nice with `gofmt` and `goimports`
 - Add tmux config
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
