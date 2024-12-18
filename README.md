@@ -21,7 +21,7 @@ Dockerfile and Makefile are included so I can test this setup easily.
 
 Obviously you'll need docker installed. Then, follow the below instructions:
 
-1. build the docker container by running `docker build.`
+1. build the docker container by running `docker build .`
 2. get the container ID by running `docker images`
 3. run the container using `docker run -i -v ${PWD}:/home/ubuntu/dot_files -t <CONTAINER_ID> /bin/bash`
 4. navigate to /home/ubuntu/dot_files in the container and execute `ansible-playbook desktop_config.yml`

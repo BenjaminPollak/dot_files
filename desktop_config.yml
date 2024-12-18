@@ -8,18 +8,12 @@
         update_cache: true
       tags:
         - ubuntu
-        - utils
-        - dev_tools
-        - golang
-        - python
-        - git
-        - vim
   tasks:
     # Ordering is intentional, DO NOT ALPHABETIZE!
-    - include_tasks: desktop_tasks/dev_tools.yml
-    - include_tasks: desktop_tasks/utils.yml
-    - include_tasks: desktop_tasks/golang.yml
-    - include_tasks: desktop_tasks/python.yml
-    - include_tasks: desktop_tasks/git.yml # TODO: add config
-    - include_tasks: desktop_tasks/stow.yml
-    - include_tasks: desktop_tasks/vim.yml
+    - import_tasks: desktop_tasks/dev_tools.yml
+    - import_tasks: desktop_tasks/utils.yml
+    - import_tasks: desktop_tasks/golang.yml
+    - import_tasks: desktop_tasks/python.yml
+    - import_tasks: desktop_tasks/git.yml # TODO: add config
+    - import_tasks: desktop_tasks/stow.yml
+    - import_tasks: desktop_tasks/vim.yml
