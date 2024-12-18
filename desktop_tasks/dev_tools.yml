@@ -16,6 +16,7 @@
       - "make"
       - "zsh"
       - "node"
+      - "homebrew/cask/iterm2"
   tags:
     - mac
     - dev_tools
