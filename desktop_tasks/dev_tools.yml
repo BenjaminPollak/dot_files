@@ -15,6 +15,7 @@
       - "sqlite"
       - "make"
       - "zsh"
+      - "node"
   tags:
     - mac
     - dev_tools
