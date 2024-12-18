@@ -1,15 +1,21 @@
-- name: Install Python 3
+- name: Install Python 3 (ubuntu)
   apt: name=python3
   tags:
     - ubuntu
     - python
-- name: Install Pip
+- name: Install Pip (ubuntu)
   apt: name=python3-pip
   tags:
     - ubuntu
     - python
-- name: Install virtualenv python package
+- name: Install virtualenv python package (ubuntu)
   apt: name=python3-virtualenv
   tags:
     - ubuntu
+    - python
+
+- name: Install Python 3 (mac) # TODO automate pip and virtualenv installation
+  community.general.homebrew: name=python@3
+  tags:
+    - mac
     - python

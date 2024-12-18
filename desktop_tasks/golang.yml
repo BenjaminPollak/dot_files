@@ -1,5 +1,10 @@
-- name: Install GoLang
+- name: Install GoLang (ubuntu)
   apt: name=golang-go
   tags:
     - ubuntu
+    - golang
+- name: Install GoLang (mac)
+  community.general.homebrew: name=go
+  tags:
+    - mac
     - golang

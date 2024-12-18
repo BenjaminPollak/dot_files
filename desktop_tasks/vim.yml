@@ -1,10 +1,20 @@
-- name: Install Vim
+- name: install vim (ubuntu)
   apt: name=vim
   tags:
     - ubuntu
     - vim
-- name: Install neovim
+- name: install neovim (ubuntu)
   apt: name=neovim
   tags:
     - ubuntu
+    - vim
+- name: install vim (mac)
+  community.general.homebrew: name=vim
+  tags:
+    - mac
+    - vim
+- name: install neovim (mac)
+  community.general.homebrew: name=neovim
+  tags:
+    - mac
     - vim

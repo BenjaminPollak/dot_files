@@ -42,3 +42,4 @@ I have made this possible in the following ways:
 - Pull dependencies from Snap instead of APT
 - Refactor custom nvim commands to use Lua instead of Vimscript
 - automate install of docker-compose
+- Rename ubuntu script

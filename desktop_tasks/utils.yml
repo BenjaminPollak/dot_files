@@ -1,4 +1,4 @@
-- name: Install utils
+- name: install utils (ubuntu)
   apt:
     name:
       - "curl"
@@ -9,4 +9,15 @@
       - "parallel"
   tags:
     - ubuntu
+    - utils
+- name: install utils (mac)
+  community.general.homebrew:
+    name:
+      - "curl"
+      - "jq"
+      - "ranger"
+      - "fzf"
+      - "parallel"
+  tags:
+    - mac
     - utils

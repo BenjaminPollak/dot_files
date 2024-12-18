@@ -1,10 +1,16 @@
-- name: Install Stow
+- name: Install Stow (ubuntu)
   apt: name=stow
   tags:
     - ubuntu
+    - stow
+- name: Install Stow (mac)
+  community.general.homebrew: name=stow
+  tags:
+    - mac
     - stow
 - name: Stow necessary files
   script: ./ubuntu.sh
   tags:
     - ubuntu
+    - mac
     - stow

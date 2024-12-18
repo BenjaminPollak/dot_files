@@ -1,5 +1,10 @@
-- name: Install Git
+- name: Install Git (ubuntu)
   apt: name=git
   tags:
     - ubuntu
+    - git
+- name: Install Git (mac)
+  community.general.homebrew: name=git
+  tags:
+    - mac
     - git
