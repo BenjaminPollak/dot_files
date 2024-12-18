@@ -1,4 +1,4 @@
-- name: Install dev tools
+- name: Install dev tools (ubuntu)
   apt:
     name:
       - "postgresql"
@@ -8,8 +8,19 @@
   tags:
     - ubuntu
     - dev_tools
+- name: Install dev tools (mac)
+  apt:
+    name:
+      - "postgresql@14"
+      - "sqlite"
+      - "make"
+      - "zsh"
+  tags:
+    - mac
+    - dev_tools
 - name: change user shell to zsh
   become: yes
   user:
     name: "{{ the_user }}"
     shell: /usr/bin/zsh
+  tags: ubuntu
