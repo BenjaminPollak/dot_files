@@ -9,7 +9,7 @@
     - ubuntu
     - dev_tools
 - name: Install dev tools (mac)
-  apt:
+  community.general.homebrew:
     name:
       - "postgresql@14"
       - "sqlite"
