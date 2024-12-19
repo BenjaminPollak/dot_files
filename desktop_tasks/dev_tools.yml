@@ -6,6 +6,7 @@
       - "make"
       - "zsh"
       - "tmux"
+      - "protobuf-compiler"
   tags:
     - ubuntu
     - dev_tools
@@ -19,6 +20,7 @@
       - "node"
       - "tmux"
       - "homebrew/cask/iterm2"
+      - "protobuf"
   tags:
     - mac
     - dev_tools
