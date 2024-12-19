@@ -5,6 +5,7 @@
       - "sqlite3"
       - "make"
       - "zsh"
+      - "tmux"
   tags:
     - ubuntu
     - dev_tools
@@ -16,6 +17,7 @@
       - "make"
       - "zsh"
       - "node"
+      - "tmux"
       - "homebrew/cask/iterm2"
   tags:
     - mac

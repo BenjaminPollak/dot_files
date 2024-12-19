@@ -1,36 +1,44 @@
 # Pacakges To Install
 
 ## Utilities
-* curl [X]
-* jq [X]
-* ranger [X]
+
+- curl [X]
+- jq [X]
+- ranger [X]
 
 ## Developer Tools
-* postgresql [X]
-* sqlite3 [X]
+
+- postgresql [X]
+- sqlite3 [X]
 
 ## Languages, Environment Tools and Package Managers
 
 ### GoLang
-* golang-go [X]
+
+- golang-go [X]
 
 ### Python
-* python3 [X]
-* python3-pip [X]
-* virtualenv [X]
+
+- python3 [X]
+- python3-pip [X]
+- virtualenv [X]
 
 ### JS/TS/Node
-* nodejs []
-* npm []
+
+- nodejs []
+- npm []
 
 ## git
-* git []
-* config []
+
+- git [x]
+- config [x]
 
 ## Vim/Nvim
-* vim []
-* nvim []
-* nvim config
+
+- vim [x]
+- nvim [x]
+- nvim config
 
 ## Tmux
-* tmux []
+
+- tmux [x]
