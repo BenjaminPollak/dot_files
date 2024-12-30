@@ -43,6 +43,7 @@ I have made this possible in the following ways:
 # TODOs
 
 - Add tmux config
+- Automate creating folder structure for TPM
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
 - Automate creation of `~/.identityconfig` with git name + email
