@@ -42,7 +42,7 @@ I have made this possible in the following ways:
 
 # TODOs
 
-- Add tmux config
+- Install Neovim Dadbod plugin
 - Automate creating folder structure for TPM
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
