@@ -14,6 +14,7 @@ return {
 					"gopls",
 					"lua_ls",
 					"pyright",
+					"sqlls",
 					"terraformls",
 					"ts_ls",
 					"yamlls",
@@ -60,6 +61,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.yamlls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.sqlls.setup({
 				capabilities = capabilities,
 			})
 

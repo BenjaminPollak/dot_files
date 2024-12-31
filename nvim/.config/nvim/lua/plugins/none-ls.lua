@@ -16,6 +16,10 @@ return {
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.gofmt,
 				null_ls.builtins.formatting.goimports,
+				null_ls.builtins.diagnostics.sqlfluff.with({
+					extra_args = { "--dialect", "postgres" },
+				}),
+				null_ls.builtins.formatting.sqlfmt,
 			},
 			-- you can reuse a shared lspconfig on_attach callback here
 			on_attach = function(client, bufnr)
