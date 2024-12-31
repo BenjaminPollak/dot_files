@@ -14,9 +14,9 @@ return {
 					"gopls",
 					"lua_ls",
 					"pyright",
+					"terraformls",
 					"ts_ls",
 					"yamlls",
-					"terraformls",
 				},
 			})
 		end,
@@ -53,13 +53,13 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.yamlls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.terraformls.setup({
 				capabilities = capabilities,
 			})
 
