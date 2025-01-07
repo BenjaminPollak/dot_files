@@ -13,10 +13,6 @@ return {
     "github/copilot.vim",
   },
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
-  },
-  {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
