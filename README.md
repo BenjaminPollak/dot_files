@@ -54,3 +54,4 @@ I have made this possible in the following ways:
 - Refactor custom nvim commands to use Lua instead of Vimscript
 - automate install of docker-compose
 - Rename ubuntu script
+- Set up ranger config
