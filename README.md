@@ -39,6 +39,7 @@ I have made this possible in the following ways:
 
 - for Z-Shell: put config in `~/local.zsh`
 - for git: if on a work machine, put config in `~/work/.gitconfig`
+- for Neovim: put config in `~/dot_files/nvim/.config/nvim/lua/local.lua`
 
 # TODOs
 
