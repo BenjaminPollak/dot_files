@@ -43,7 +43,6 @@ I have made this possible in the following ways:
 
 # TODOs
 
-- Install Neovim Dadbod plugin
 - Clean up gitconfig
   - Do you really need identity file?
   - Can you get ssh/http stuff in a better place?
