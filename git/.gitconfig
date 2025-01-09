@@ -7,9 +7,6 @@
   path = ~/.identityconfig
 [includeIf "gitdir:~/work/"]
   path = ~/work/.gitconfig
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-	insteadOf = https://github.com/
 [alias]
 	blame = blame -w
 	blaame = blame -w -C

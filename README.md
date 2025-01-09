@@ -37,15 +37,16 @@ Obviously you'll need docker installed. Then, follow the below instructions:
 
 I have made this possible in the following ways:
 
-- for Z-Shell: put config in `~/local.zsh`
-- for git: if on a work machine, put config in `~/work/.gitconfig`
-- for Neovim: put local plugin config in `nvim/.config/nvim/lua/plugins/local.lua`
+- for Z-Shell:
+  - put config in `~/local.zsh`
+- for Git:
+  - if on a work machine, put config in `~/work/.gitconfig`
+  - if on a personal machine, set up name and email in `~/.identityconfig`
+- for Neovim:
+  - put local plugin config in `nvim/.config/nvim/lua/plugins/local.lua`
 
 # TODOs
 
-- Clean up gitconfig
-  - Do you really need identity file?
-  - Can you get ssh/http stuff in a better place?
 - Automate creating folder structure for TPM
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
