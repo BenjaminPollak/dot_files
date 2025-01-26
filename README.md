@@ -48,6 +48,7 @@ I have made this possible in the following ways:
 # TODOs
 
 - Automate creating folder structure for TPM
+- Automate installation of rust for HTMX LSP
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
 - Automate creation of `~/.identityconfig` with git name + email
