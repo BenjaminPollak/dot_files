@@ -56,5 +56,6 @@ PROMPT='%B%F{003} U %B%F{015}%~%B%F{006} >>%b%F{015} '
 # Golang related
 export PATH=$PATH:~/go/bin
 export GOPATH=$HOME/code
+export MANPAGER='nvim +Man!'
 
 source ~/.local.zsh
