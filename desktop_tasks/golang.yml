@@ -8,3 +8,9 @@
   tags:
     - mac
     - golang
+- name: Install Delve Debugger
+  command: go install github.com/go-delve/delve/cmd/dlv@latest
+  tags:
+    - mac
+    - ubuntu
+    - golang
