@@ -47,6 +47,7 @@ I have made this possible in the following ways:
 
 # TODOs
 
+- setup debugging
 - Automate creating folder structure for TPM
 - Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
