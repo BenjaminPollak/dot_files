@@ -1,0 +1,7 @@
+- name: Install i3 Win Window Manager
+  apt:
+    name:
+      - "i3"
+  tags:
+    - ubuntu
+    - i3
