@@ -11,6 +11,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "bashls",
+          "cspell",
           "gopls",
           "lua_ls",
           "pyright",
@@ -31,6 +32,9 @@ return {
 
       local lspconfig = require("lspconfig")
       lspconfig.bashls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.cspell.setup({
         capabilities = capabilities,
       })
       lspconfig.gopls.setup({
