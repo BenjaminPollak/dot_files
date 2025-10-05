@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true } })
 
 require("vim-options")
 require("vimrc")

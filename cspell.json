@@ -1,0 +1,6 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["nvim", "keymap", "augroup", "@cspell/dict-lua/cspell-ext.json"],
+  "flagWords": []
+}
