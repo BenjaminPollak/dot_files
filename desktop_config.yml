@@ -15,6 +15,7 @@
     - import_tasks: desktop_tasks/golang.yml
     - import_tasks: desktop_tasks/python.yml
     - import_tasks: desktop_tasks/git.yml # TODO: add config
+    - import_tasks: desktop_tasks/tmux.yml
     - import_tasks: desktop_tasks/stow.yml
     - import_tasks: desktop_tasks/vim.yml
     - import_tasks: desktop_tasks/i3wm.yml

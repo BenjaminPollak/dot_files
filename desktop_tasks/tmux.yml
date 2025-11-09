@@ -1,0 +1,12 @@
+- name: create TMUX plugins directory structure
+  ansible.builtin.file:
+    path: ~/.tmux/plugins
+    state: directory
+- name: clone tpm
+  ansible.builtin.git:
+    repo: "https://github.com/tmux-plugins/tpm"
+    dest: "~/.tmux/plugins/tpm"
+  tags:
+    - mac
+    - ubuntu
+    - dev_tools

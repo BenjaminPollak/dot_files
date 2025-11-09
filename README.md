@@ -24,6 +24,10 @@ Dockerfile and Makefile are included so I can test this setup easily.
 
 - Right now, the ansible script escalates privileges to while running. Manually delete the line `become: true` if running on a mac computer.
 
+# Postrequisites
+
+Install tmux plugins using `Signal` + `Shift` + `I`.
+
 # Testing with Docker
 
 Obviously you'll need docker installed. Then, follow the below instructions:
@@ -48,8 +52,6 @@ I have made this possible in the following ways:
 # TODOs
 
 - setup debugging
-- Automate creating folder structure for TPM
-- Add ~/.config/i3/config
 - Add ~/.config/i3blocks/
 - Automate creation of `~/.identityconfig` with git name + email
 - Pull dependencies from Snap instead of APT
