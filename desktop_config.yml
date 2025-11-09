@@ -1,9 +1,9 @@
 - hosts: localhost
-  become: true
   vars:
     the_user: "benjamin"
   pre_tasks:
     - name: Update cache
+      become: true
       apt:
         update_cache: true
       tags:

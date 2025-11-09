@@ -13,9 +13,15 @@
   tags:
     - ubuntu
     - python
-
 - name: Install Python 3 (mac) # TODO automate pip and virtualenv installation
   community.general.homebrew: name=python@3
   tags:
+    - mac
+    - python
+- name: Download and install uv
+  ansible.builtin.shell: |
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+  tags:
+    - ubuntu
     - mac
     - python
