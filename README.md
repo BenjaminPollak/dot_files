@@ -3,8 +3,10 @@
 This repo is for tracking my dotfiles. It currently contains the following:
 
 - Ansible Scripts (for quickly installing and configuring software on a new computer)
-- Bash Config Scripts
+- Bash/Zsh Config Scripts
 - Git Configs
+- i3 configs
+- Tmux Config
 - Vim/Nvim Config
 
 Config files are managed through GNU Stow.
@@ -20,17 +22,11 @@ Dockerfile and Makefile are included so I can test this setup easily.
 
 - Primary user account is named `benjamin`
 
-## For a Work Machine
-
-- Right now, the ansible script escalates privileges to while running. Manually delete the line `become: true` if running on a mac computer.
-
 # Postrequisites
 
 Install tmux plugins using `Signal` + `Shift` + `I`.
 
 # Testing with Docker
-
-Obviously you'll need docker installed. Then, follow the below instructions:
 
 1. build the docker container by running `docker build .`
 2. get the container ID by running `docker images`
@@ -51,12 +47,11 @@ I have made this possible in the following ways:
 
 # TODOs
 
+- make ansible scripts idempotent
 - setup debugging
-- Add ~/.config/i3blocks/
 - Automate creation of `~/.identityconfig` with git name + email
 - Pull dependencies from Snap instead of APT
 - Refactor custom nvim commands to use Lua instead of Vimscript
 - automate install of docker-compose
 - Rename ubuntu script
 - Set up ranger config
-- Automate installation of rust for HTMX LSP
