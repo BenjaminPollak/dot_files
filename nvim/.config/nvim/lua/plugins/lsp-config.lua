@@ -30,38 +30,41 @@ return {
       local util = require("lspconfig.util")
 
       local lspconfig = require("lspconfig")
-      lspconfig.bashls.setup({
+      vim.lsp.config("bashls", {
         capabilities = capabilities,
       })
-      lspconfig.gopls.setup({
-        -- ...some other setups
-        root_dir = function(fname)
-          -- see: https://github.com/neovim/nvim-lspconfig/issues/804
-          local mod_cache = vim.trim(vim.fn.system("go env GOMODCACHE"))
-          if fname:sub(1, #mod_cache) == mod_cache then
-            local clients = vim.lsp.get_active_clients({ name = "gopls" })
-            if #clients > 0 then
-              return clients[#clients].config.root_dir
-            end
-          end
-          return util.root_pattern("go.work")(fname) or util.root_pattern("go.mod", ".git")(fname)
-        end,
+      vim.lsp.config("lua_ls", {
         capabilities = capabilities,
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("terraformls", {
         capabilities = capabilities,
       })
-      lspconfig.terraformls.setup({
+      vim.lsp.config("ts_ls", {
         capabilities = capabilities,
       })
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("yamlls", {
         capabilities = capabilities,
       })
-      lspconfig.yamlls.setup({
+      vim.lsp.config("sqlls", {
         capabilities = capabilities,
       })
-      lspconfig.sqlls.setup({
-        capabilities = capabilities,
+      --lspconfig.gopls.setup({
+      --  -- ...some other setups
+      --  root_dir = function(fname)
+      --    -- see: https://github.com/neovim/nvim-lspconfig/issues/804
+      --    local mod_cache = vim.trim(vim.fn.system("go env GOMODCACHE"))
+      --    if fname:sub(1, #mod_cache) == mod_cache then
+      --      local clients = vim.lsp.get_active_clients({ name = "gopls" })
+      --      if #clients > 0 then
+      --        return clients[#clients].config.root_dir
+      --      end
+      --    end
+      --    return util.root_pattern("go.work")(fname) or util.root_pattern("go.mod", ".git")(fname)
+      --  end,
+      --  capabilities = capabilities,
+      --})
+      vim.lsp.config("gopls", {
+        capabilities = capabilities
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
