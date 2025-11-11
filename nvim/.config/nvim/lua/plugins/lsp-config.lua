@@ -14,7 +14,6 @@ return {
           "cspell",
           "gopls",
           "lua_ls",
-          "ruff",
           "sqlls",
           "terraformls",
           "ts_ls",
@@ -56,9 +55,6 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.ruff.setup({
-        capabilities = capabilities,
-      })
       lspconfig.terraformls.setup({
         capabilities = capabilities,
       })
@@ -87,7 +83,7 @@ return {
     config = function()
       require("null-ls") -- require your null-ls config here (example below)
       require("mason-null-ls").setup({
-        ensure_installed = { "mypy" },
+        ensure_installed = { "mypy", "ruff" },
         automatic_installation = true,
       })
     end,

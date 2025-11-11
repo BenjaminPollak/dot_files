@@ -29,6 +29,7 @@ return {
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
         null_ls.builtins.diagnostics.mypy,
+        null_ls.builtins.formatting.ruff,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
         require("cspell").diagnostics,
