@@ -29,7 +29,6 @@ return {
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
         null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.formatting.ruff,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.goimports,
         require("cspell").diagnostics,
@@ -37,7 +36,7 @@ return {
       },
       -- you can reuse a shared lspconfig on_attach callback here
       on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
+        if client.supports_method and client:supports_method("textDocument/hover") then
           vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
           vim.api.nvim_create_autocmd("BufWritePre", {
             group = augroup,
