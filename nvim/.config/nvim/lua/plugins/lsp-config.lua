@@ -13,6 +13,7 @@ return {
           "bashls",
           "gopls",
           "lua_ls",
+          "pyright",
           "sqlls",
           "terraformls",
           "ts_ls",
@@ -35,6 +36,12 @@ return {
       })
       vim.lsp.config("lua_ls", {
         capabilities = capabilities,
+      })
+      vim.lsp.config("pyright", {
+        capabilities = capabilities,
+        venvPath = ".",
+        venv = ".venv",
+        pythonPath = "./.venv/bin/python"
       })
       vim.lsp.config("terraformls", {
         capabilities = capabilities,
@@ -80,7 +87,8 @@ return {
       "nvimtools/none-ls.nvim",
     },
     config = function()
-      require("null-ls") -- require your null-ls config here (example below)
+      require("null-ls")
+      -- for these tools to run, they must be installed in each environment
       require("mason-null-ls").setup({
         ensure_installed = { "mypy", "ruff" },
         automatic_installation = true,
