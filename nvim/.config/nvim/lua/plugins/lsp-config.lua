@@ -14,6 +14,7 @@ return {
           "gopls",
           "lua_ls",
           "pyright",
+          "ruff",
           "sqlls",
           "terraformls",
           "ts_ls",
@@ -41,7 +42,10 @@ return {
         capabilities = capabilities,
         venvPath = ".",
         venv = ".venv",
-        pythonPath = "./.venv/bin/python"
+        pythonPath = "./.venv/bin/python",
+      })
+      vim.lsp.config("ruff", {
+        capabilities = capabilities,
       })
       vim.lsp.config("terraformls", {
         capabilities = capabilities,
@@ -79,20 +83,4 @@ return {
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "nvimtools/none-ls.nvim",
-    },
-    config = function()
-      require("null-ls")
-      -- for these tools to run, they must be installed in each environment
-      require("mason-null-ls").setup({
-        ensure_installed = { "mypy", "ruff" },
-        automatic_installation = true,
-      })
-    end,
-  }
 }
