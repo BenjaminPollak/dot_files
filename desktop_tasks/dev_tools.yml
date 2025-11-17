@@ -26,9 +26,18 @@
   tags:
     - mac
     - dev_tools
+- name: Download and install mise
+  ansible.builtin.shell: |
+    curl https://mise.run | sh
+  tags:
+    - ubuntu
+    - mac
+    - dev_tools
 - name: change user shell to zsh
   become: yes
   user:
     name: "{{ the_user }}"
     shell: /usr/bin/zsh
-  tags: ubuntu
+  tags:
+    - ubuntu
+    - dev_tools
