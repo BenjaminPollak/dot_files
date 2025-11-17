@@ -11,6 +11,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "bashls",
+          "eslint",
           "gopls",
           "lua_ls",
           "pyright",
@@ -29,10 +30,12 @@ return {
     lazy = false,
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local util = require("lspconfig.util")
 
       local lspconfig = require("lspconfig")
       vim.lsp.config("bashls", {
+        capabilities = capabilities,
+      })
+      vim.lsp.config("eslint", {
         capabilities = capabilities,
       })
       vim.lsp.config("lua_ls", {
@@ -50,8 +53,12 @@ return {
       vim.lsp.config("terraformls", {
         capabilities = capabilities,
       })
-      vim.lsp.config("ts_ls", {
-        capabilities = capabilities,
+      vim.lsp.config('tsserver', { -- alias of ts_ls
+        cmd = { 'typescript-language-server', '--stdio' },
+        root_dir = function ()
+          local root = vim.fs.find({ 'tsconfig.json', 'package.json' }, { upward = true })[1]
+          return root and vim.fs.dirname(root) or vim.fn.getcwd()
+        end,
       })
       vim.lsp.config("yamlls", {
         capabilities = capabilities,
@@ -59,6 +66,7 @@ return {
       vim.lsp.config("sqlls", {
         capabilities = capabilities,
       })
+      --local util = require("lspconfig.util")
       --lspconfig.gopls.setup({
       --  -- ...some other setups
       --  root_dir = function(fname)
