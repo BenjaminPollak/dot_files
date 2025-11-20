@@ -1,6 +1,28 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["nvim", "keymap", "augroup", "@cspell/dict-lua/cspell-ext.json"],
+  "words": [
+    "@cspell/dict-lua/cspell-ext.json",
+    "augroup",
+    "autocmd",
+    "autopairs",
+    "autotag",
+    "bufnr",
+    "catgoose",
+    "catppuccin",
+    "gitsigns",
+    "folke",
+    "hrsh7th",
+    "kristijanhusak",
+    "keymap",
+    "lspconfig",
+    "luasnip",
+    "nvim",
+    "rafamadriz",
+    "saadparwaiz1",
+    "tpope",
+    "windwp",
+    "williamboman"
+  ],
   "flagWords": []
 }

@@ -48,12 +48,6 @@ I have made this possible in the following ways:
 # TODOs
 
 - replace none-ls with `conform.nvim` + `nvim-lint`
-- look into plugins:
-  - [trouble](https://github.com/folke/trouble.nvim)
-  - [bufferline](https://github.com/akinsho/bufferline.nvim)
-  - [lualine](https://github.com/nvim-lualine/lualine.nvim)
-  - [neotest](https://github.com/nvim-neotest/neotest)
-  - [neotest-vitest](https://github.com/marilari88/neotest-vitest)
 - make ansible scripts idempotent
 - setup debugging
 - Automate creation of `~/.identityconfig` with git name + email
@@ -62,3 +56,9 @@ I have made this possible in the following ways:
 - automate install of docker-compose
 - Rename ubuntu script
 - Set up ranger config
+- look into nvim plugins:
+  - [trouble](https://github.com/folke/trouble.nvim)
+  - [bufferline](https://github.com/akinsho/bufferline.nvim)
+  - [lualine](https://github.com/nvim-lualine/lualine.nvim)
+  - [neotest](https://github.com/nvim-neotest/neotest)
+  - [neotest-vitest](https://github.com/marilari88/neotest-vitest)
