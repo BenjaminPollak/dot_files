@@ -47,6 +47,7 @@ I have made this possible in the following ways:
 
 # TODOs
 
+- replace pyright with basedpyright
 - replace none-ls with `conform.nvim` + `nvim-lint`
 - make ansible scripts idempotent
 - setup debugging
