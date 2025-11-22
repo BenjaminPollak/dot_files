@@ -2,21 +2,7 @@ return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
 		"nvimtools/none-ls-extras.nvim",
-		"davidmh/cspell.nvim",
 	},
-	opts = function(_, opts)
-		local cspell = require("cspell")
-		opts.sources = opts.sources or {}
-		table.insert(
-			opts.sources,
-			cspell.diagnostics.with({
-				diagnostics_postprocess = function(diagnostic)
-					diagnostic.severity = vim.diagnostic.severity.HINT
-				end,
-			})
-		)
-		table.insert(opts.sources, cspell.code_actions)
-	end,
 	config = function()
 		local null_ls = require("null-ls")
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -25,8 +11,6 @@ return {
 			sources = {
 				null_ls.builtins.formatting.gofmt,
 				null_ls.builtins.formatting.goimports,
-				require("cspell").diagnostics,
-				require("cspell").code_actions,
 			},
 			-- you can reuse a shared lspconfig on_attach callback here
 			on_attach = function(client, bufnr)

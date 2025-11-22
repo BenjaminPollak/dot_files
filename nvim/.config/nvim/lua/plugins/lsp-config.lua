@@ -11,6 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"bashls",
+					"cspell_ls",
 					"eslint",
 					"gopls",
 					"lua_ls",
@@ -33,6 +34,9 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			vim.lsp.config("bashls", {
+				capabilities = capabilities,
+			})
+			vim.lsp.config("cspell_ls", {
 				capabilities = capabilities,
 			})
 			vim.lsp.config("eslint", {
