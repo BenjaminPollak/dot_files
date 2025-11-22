@@ -1,43 +1,79 @@
+local function find_project_root()
+	local dir = vim.fn.expand("%:p:h") -- start at current buffer's directory
+	while dir ~= "/" do
+		-- check for package.json (JS/TS) or pyproject.toml (Python)
+		if vim.fn.filereadable(dir .. "/package.json") == 1 or vim.fn.filereadable(dir .. "/pyproject.toml") == 1 then
+			return dir
+		end
+		-- move up one directory
+		dir = vim.fn.fnamemodify(dir, ":h")
+	end
+	return nil -- not found
+end
+
 return {
 	{
 		"stevearc/conform.nvim",
 		config = function()
 			local conform = require("conform")
 
-			-- Configure formatters by filetype
+			-- Setup formatters
 			conform.setup({
 				log_level = vim.log.levels.DEBUG,
 				formatters_by_ft = {
-					-- future languages can be added here, e.g.:
-					-- go = { "gofmt" },
-					-- javascript = { "prettier" },
-					-- sh = { "shfmt" },
 					python = { "black" },
-					formatters = {
-						black = {
-							command = function()
-								-- Prefer project venv
-								local buf_dir = vim.fn.expand("%:p:h")
-								local venv_black = buf_dir .. "/.venv/bin/black"
-								if vim.fn.executable(venv_black) == 1 then
-									return venv_black
+					javascript = { "prettier" },
+					typescript = { "prettier" },
+					javascriptreact = { "prettier" },
+					typescriptreact = { "prettier" },
+					json = { "prettier" },
+					css = { "prettier" },
+					html = { "prettier" },
+				},
+				-- Optional: define custom commands for formatters
+				formatters = {
+					black = {
+						command = function()
+							local buf_dir = vim.fn.expand("%:p:h")
+							local venv_black = buf_dir .. "/.venv/bin/black"
+							if vim.fn.executable(venv_black) == 1 then
+								return venv_black
+							end
+							local mason_black = vim.fn.stdpath("data") .. "/mason/bin/black"
+							if vim.fn.executable(mason_black) == 1 then
+								return mason_black
+							end
+							if vim.fn.executable("black") == 1 then
+								return "black"
+							end
+							vim.notify("Black formatter not found!", vim.log.levels.WARN)
+							return nil
+						end,
+						args = { "--fast", "-" },
+						stdin = true,
+					},
+					prettier = {
+						command = function()
+							local root = find_project_root()
+							if root then
+								local project_prettier = root .. "/node_modules/.bin/prettier"
+								if vim.fn.executable(project_prettier) == 1 then
+									return project_prettier
 								end
+							end
 
-								-- Mason-installed black
-								local mason_black = vim.fn.stdpath("data") .. "/mason/bin/black"
-								if vim.fn.executable(mason_black) == 1 then
-									return mason_black
-								end
-								-- System black fallback
-								if vim.fn.executable("black") == 1 then
-									return "black"
-								end
-								vim.notify("Black formatter not found!", vim.log.levels.WARN)
-								return nil
-							end,
-							args = { "--fast" },
-						},
-						-- future formatter configs can be added here
+							-- fallback to global or Mason
+							if vim.fn.executable("prettier") == 1 then
+								return "prettier"
+							end
+							local mason_prettier = vim.fn.stdpath("data") .. "/mason/bin/prettier"
+							if vim.fn.executable(mason_prettier) == 1 then
+								return mason_prettier
+							end
+							vim.notify("Prettier not found!", vim.log.levels.WARN)
+							return nil
+						end,
+						args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
 					},
 				},
 			})
@@ -60,11 +96,21 @@ return {
 
 			-- Autoformat on save
 			vim.api.nvim_create_autocmd("BufWritePre", {
-				pattern = "*.py", -- can be expanded per language later
+				pattern = {
+					"*.py",
+					"*.js",
+					"*.ts",
+					"*.jsx",
+					"*.tsx",
+					"*.json",
+					"*.css",
+					"*.html",
+				},
 				callback = function()
 					M.format()
 				end,
 			})
+
 			return M
 		end,
 	},
