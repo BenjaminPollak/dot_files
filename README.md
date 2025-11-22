@@ -24,7 +24,12 @@ Dockerfile and Makefile are included so I can test this setup easily.
 
 # Postrequisites
 
-Install tmux plugins using `Signal` + `Shift` + `I`.
+1. Install tmux plugins using `Signal` + `Shift` + `I`.
+2. Run the following mise commands to install the latest versions of my primary programming languages:
+   a. `mise install python@latest`
+   b. `mise install node@latest`
+   c. `mise install go@latest`
+3. Run ` sudo npm install -g cspell`
 
 # Testing with Docker
 
@@ -48,6 +53,7 @@ I have made this possible in the following ways:
 # TODOs
 
 - replace pyright with basedpyright
+- explore scripting postrequisites
 - replace none-ls with `conform.nvim` + `nvim-lint`
 - make ansible scripts idempotent
 - setup debugging
