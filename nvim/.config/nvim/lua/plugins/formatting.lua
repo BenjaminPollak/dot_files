@@ -21,6 +21,10 @@ return {
 			conform.setup({
 				log_level = vim.log.levels.DEBUG,
 				formatters_by_ft = {
+					go = {
+            "goimports",
+            "gofmt",
+          },
 					python = { "black" },
 					javascript = { "prettier" },
 					typescript = { "prettier" },
@@ -105,6 +109,7 @@ return {
 					"*.json",
 					"*.css",
 					"*.html",
+          "*.go",
 				},
 				callback = function()
 					M.format()
