@@ -40,14 +40,30 @@ return {
 			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
 			})
+			-- Pyright (Type Checking Only)
 			vim.lsp.config("pyright", {
 				capabilities = capabilities,
 				venvPath = ".",
 				venv = ".venv",
 				pythonPath = "./.venv/bin/python",
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							diagnosticMode = "workspace",
+						},
+					},
+				},
 			})
-			vim.lsp.config("ruff", {
+			-- Ruff (Linting, Import Sorting, Fixes — NO formatting)
+			vim.lsp.config("ruff_lsp", {
 				capabilities = capabilities,
+				init_options = {
+					settings = {
+						args = { "--no-format" },
+					},
+				},
 			})
 			vim.lsp.config("terraformls", {
 				capabilities = capabilities,
