@@ -60,3 +60,4 @@ export GOPATH=$HOME/code
 export MANPAGER='nvim +Man!'
 
 source ~/.local.zsh
+eval "$(~/.local/bin/mise activate zsh)"
